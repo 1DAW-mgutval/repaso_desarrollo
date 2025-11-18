@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <link rel="stylesheet" href="style.css">
+
+    <div class="general_menu">
+        <a href="index.html" class="menu">Inicio</a>
+        <a href="tablas.html" class="menu">Tablas</a>
+        <a href="multimedia.html" class="menu"> Multimedia</a>
+        <a href="formulario.html" class="menu">Formulario</a>
+        <a href="canvas.html" class="menu">Canvas</a>
+    </div>
+</head>
+<body>
+    <h1>TABLAS</h1>
+    <h2>Tabla Básica</h2>
+    <p>Para hacer una tabla, lo primero que debes abrir la etiqueta "table". A partir de ahora, todo lo que se explique estará dentro de esta etiqueta</p>
+    <p>Para crear una nueva fila, usamos la etiqueta "tr", dentro de esa etiqueta, podemo crear tantas columnas como deseemos.</p>
+    <p>Para crear columna, tenemos dos etiquetas:</p>
+    <ul class="lista_tablas">
+        <li><strong>Etiqueta "th".</strong> Esta etiqueta tiene un formato de cabecera, con una letra en negrita.</li>
+        <li><strong>Etiqueta "td".</strong> Esta etiqueta tiene un formato de texto normal, datos que se ponen en la tabla sin más.</li>
+    </ul>
+    <p>Evidentemente se puede cambiar el formato de las dos etiquetas mediante CSS. A continuación tiene un ejemplo de una tabla básica:</p>
+
+    <table>
+        <tr>
+            <th>Primera fila (primer tr).</th>
+            <th>Estos son</th>
+            <th>encabecados de tabla (th).</th>
+        </tr>
+        <tr>
+            <td>Primera fila (segundo tr).</td>
+            <td>Estos son</td>
+            <td>datos normales (td).</td>
+        </tr>
+    </table>
+
+    <p>Habrás podido observar que no te aparecen los bordes cuando haces la tabla, eso es porque debes añadir los siguientes valores en el CSS:</p>
+    <ol>
+        <li>"border: 'X'". Lo que sigue a "border" es el grosor del borde, medido en píxeles (px), o la medida que quieras usar</li>
+        <li>"border-style: 'X'". Este es el tipo de borde, en el caso de querer el usual, es "solid".</li>
+        <li>Para que haya una sola línea en vez de un cuadrado por etiqueta, debes usar la siguiente opción: "border-collapse: collapse;"</li>
+        <li>Para cambiar el color, usa "border-color: 'color deseado'"</li>
+    </ol>
+
+    <h2>Colapso de Filas y Columnas</h2>
+
+    <p>Si quieres juntas filas o columnas, usa los siguientes atributos dentro de la etiqueta que quieras:</p>
+    <ul>
+        <li>"colspan="número"". Con esto (dentro de un th o td), haces que ocupe el número de columnas que quieres.</li>
+        <li>"rowspan="número"". Con esto (dentro de un th o td), haces que ocupe el número de filas que quieres.</li>
+    </ul>
+
+    <table>
+        <tr>
+            <th colspan="2">Colspan 2</th>
+            <th>Dato 2</th>
+            <th>Dato 3</th>
+            <th>Dato 4</th>
+        </tr>
+        <tr>
+            <td>Dato 1.1</td>
+            <td>Dato 2.1</td>
+            <td>Dato 3.1</td>
+            <td rowspan="2">Rowspan 2</td>
+        </tr>
+        <tr>
+            <td>Dato 1.2</td>
+            <td>Dato 2.2</td>
+            <td>Dato 3.2</td>
+            <td>Dato 4.2</td>
+        </tr>
+    </table><br>
+
+
+    <h2>Alternar Colores</h2>
+    <p>Para colorear cada fila de un color, cuando hagas referencia a las filas (es decir, solo debes usar el "tr"), usa la pseudoclase "nth-child", y haz referencia, entre paréntesis, a las fila pares o impares (en ingés). Después aplicamos el "background-color", que es color de fondo que queremos.</p>
+
+    <table>
+        <tr class="alternar">
+            <th>Fila 1</th>
+        </tr>
+        <tr class="alternar">
+            <td>Fila 2</td>
+        </tr>
+        <tr class="alternar">
+            <td>Fila 3</td>
+        </tr>
+        <tr class="alternar">
+            <td>Fila 4</td>
+        </tr>
+    </table>
+</body>
+</html>

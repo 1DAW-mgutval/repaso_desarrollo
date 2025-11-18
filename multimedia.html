@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia</title>
+    <link rel="stylesheet" href="style.css">
+    <div class="general_menu">
+        <a href="index.html" class="menu">Inicio</a>
+        <a href="tablas.html" class="menu">Tablas</a>
+        <a href="multimedia.html" class="menu"> Multimedia</a>
+        <a href="formulario.html" class="menu">Formulario</a>
+        <a href="canvas.html" class="menu">Canvas</a>
+    </div>
+</head>
+<body>
+    <h1>MULTIMEDIA</h1>
+
+    <h2>Enlaces</h2>
+    <p>Si quieres crear un enlace, usa la etiqueta "a", dentro de ella, el atributo "href=" y después pon el enlace donde quieres ir o incluso otro archivo html. En la etiqueta, pon lo que quieras que de clic la gente, ya sea un texto, o incluso una imagen como veremos.</p>
+    <a href="https://es.wikipedia.org/wiki/Chiquito_de_la_Calzada">Chiquito</a><br><br>
+
+    <h2>Imágenes</h2>
+    <p>Si quieres poner una imagen, usa la etiqueta "img", dentro usa el atributo "src=", donde haces referencia a un archivo en tu ordenador a una imagen de internet, mediante un enlace.</p>
+    <p>Para ajustar el tamaño de una imagen, usa el atributo "height=", para la altura, y "width=" para el ancho.</p>
+    <img src="Chiquito.jpg" alt="Imagen de chiquito" height="400px" ><br><br>
+
+    <h2>Audio</h2>
+    <p>Para poner un archivo de audio, usa la etiqueta "audio", dentro usa la etiqueta "source" con los atributos: "src=" haz referencia al archivo, nuevamente enlace o archivo local, y "type=", indicando el tipo de archivo y la extensión, en mi caso sería "audio/mp3". Dentro de la etiqueta "audio", pon el atributo "controls", para que puedas ir para adelante, atrás, pausar...</p>
+    <audio controls>
+        <source src="Motion Picture Soundtrack.mp3" type="audio/mp3">
+    </audio><br>
+
+    <h2>Vídeo</h2>
+    <p>Para poner un vídeo es igual que un audio, pero el nombre de la etiqueta es "video". Además, el "type=" de la etiqueta "source" cambia, con el tipo de archivo y extensión, en mi caso "video/mp4".</p>
+    <video controls>
+        <source src="edgar.mp4" type="video/mp4">
+    </video>
+
+</body>
+</html>
